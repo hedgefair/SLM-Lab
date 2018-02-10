@@ -52,7 +52,7 @@
     },
     "meta": {
       "max_session": 2,
-      "max_trial": 200,
+      "max_trial": 100,
       "train_mode": true
     },
     "search": {
@@ -62,15 +62,15 @@
           "lambda__uniform": [0, 1]
         },
         "net": {
-          "hid_layers__choice": [[16], [64], [32, 16], [64, 32]],
+          "hid_layers__choice": [
+            [16],
+            [64],
+            [32, 16],
+            [64, 32]
+          ],
           "optim_actor": {
-            "lr__uniform": [0.001, 0.2]
-          },
-          "optim_critic": {
-            "lr__uniform": [0.001, 0.2]
-          },
-          "decay_lr_frequency__choice": [500, 1000, 5000, 10000],
-          "decay_lr_min_timestep__choice": [1000, 2000, 5000]
+            "name__choice": ["Adam", "Adadelta", "RMSProp"]
+          }
         }
       }]
     }
