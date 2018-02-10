@@ -69,7 +69,7 @@
             [64, 32]
           ],
           "optim_actor": {
-            "name__choice": ["Adam", "Adadelta", "RMSProp"]
+            "name__choice": ["Adam", "Adadelta", "RMSprop"]
           }
         }
       }]
